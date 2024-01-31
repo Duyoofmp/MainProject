@@ -1,5 +1,4 @@
 import cv2
-#ccffgf
 import mediapipe as mp
 import pyautogui
 cam = cv2.VideoCapture(0) 
