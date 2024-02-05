@@ -6,7 +6,7 @@ face_mesh = mp.solutions.face_mesh.FaceMesh(refine_landmarks=True)
 screen_w, screen_h =pyautogui.size()
 while True:
     _, frame = cam.read()
-    frame = cv2.flip(frame, 1)                 
+    frame = cv2.flip(frame, 1)           
     rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     output = face_mesh.process(rgb_frame)
     landmarks_points = output.multi_face_landmarks
