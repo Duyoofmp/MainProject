@@ -1,6 +1,6 @@
 import React from 'react';
 import '../header/header.css';
-import logo1 from 'file:///C:/react-test/react-test/src/assets/images/logo1.svg';
+import logo1 from 'file:///C:/Users/DUYOOF/Desktop/mainPro/frontend/src/logo.svg';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import Select from '../selectDrop/select';
 
@@ -14,7 +14,7 @@ const Header =()=>{
             <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-sm-2'>
-                        <img src={logo1}/>
+                        <img src={logo1} alt='img'/>
                     </div>
 
                     {/*headerSearch start here */}
