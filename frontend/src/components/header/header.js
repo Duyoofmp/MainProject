@@ -1,9 +1,9 @@
 import React from 'react';
 import '../header/header.css';
-import logo1 from 'file:///C:/react-test/react-test/src/assets/images/logo1.svg';
+import logo1 from '../../assets/images/logo1.svg';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import IconCart from 'file:///C:/react-test/react-test/src/assets/images/icon-cart.svg'
-import IconHeart from 'file:///C:/react-test/react-test/src/assets/images/icon-heart.svg';
+import IconCart from '../../assets/images/icon-cart.svg'
+import IconHeart from '../../assets/images/icon-heart.svg';
 
 
 
