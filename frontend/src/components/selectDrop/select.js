@@ -2,7 +2,7 @@ import React from "react";
 import '../selectDrop/select.css';
 
 
-const Select =()=>{
+ const Select =()=>{
     return(
         <div className="selectDrop">
             <div className="searchField">
