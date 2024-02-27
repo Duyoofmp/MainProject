@@ -8,7 +8,7 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Home from './pages/Home/index';
 //import About from './pages/About/index';
-//import Listing from './pages/Listing';
+import Listing from './pages/Listing';
 import NotFound from './pages/NotFound';
 
 import axios from 'axios';
@@ -151,6 +151,8 @@ function App() {
         <Header data={data.productData} />
         <Routes>
           <Route exact={true} path="/" element={<Home data={data.productData} />} />
+          <Route exact={true} path="/cat/:id" element={<Listing data={data.productData} single={true} />} />
+          <Route exact={true} path="/cat/:id/:id" element={<Listing data={data.productData} single={false} />} />
           <Route exact={true} path="*" element={<NotFound />} />
         </Routes>
        <Footer/>
