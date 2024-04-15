@@ -1,14 +1,4 @@
-// Here are a few optimizations and improvements to your `App` component:
 
-// 1. **Minimize Render Blocking**: You're currently rendering the `Header` and `Footer` components regardless of the loading state. We can make these components conditional to prevent render blocking.
-
-// 2. **Consolidate useEffect Hooks**: You have two `useEffect` hooks with similar conditions, it might be more efficient to combine them.
-
-// 3. **Avoid Nested Async Functions**: Nested async functions can make the code harder to read. Try to flatten the structure where possible.
-
-// 4. **Error Handling**: Add error handling for better resilience.
-
-// ```javascript
 import { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "./Components/Header";
@@ -120,6 +110,3 @@ function App() {
 }
 
 export default App;
-// ```
-
-// These optimizations aim to make the code more readable, maintainable, and efficient. Ensure to test thoroughly after applying these changes.

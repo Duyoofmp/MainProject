@@ -47,7 +47,7 @@ const Port = process.env.APP_PORT || 5000
 
 Dbconnection().then(() => {
     app.listen(Port, () => {
-        console.log('Server is running on port 3000');
+        console.log('Server is running on port 5000');
     })
 });
 

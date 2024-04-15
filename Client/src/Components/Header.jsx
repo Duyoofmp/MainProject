@@ -75,7 +75,7 @@ function Header() {
             src="https://s3.amazonaws.com/ionic-marketplace/ecommerce-smart-shop-theme/icon.png"
             alt=""
           />
-          <h2><Link to='/'>SnapStore</Link></h2>
+          <h2><Link to='/'>Eye Commmerce</Link></h2>
         </div>
         <div className="useractions">
           <form className="searchbarPC" onSubmit={handleSearchSubmit} action="">

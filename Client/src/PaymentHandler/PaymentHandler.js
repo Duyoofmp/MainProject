@@ -32,7 +32,7 @@ export const PaymentHandler = async ({ product, quantity, user,handlePaymentStat
     key: key,
     amount: order.amount,
     currency: order.currency,
-    name: "SnapShop",
+    name: "Eye-Commerce",
     description: "Best Deals In Your Hands.",
     image:
       "https://www.pngitem.com/pimgs/b/105-1055966_google-search-logos-ecommerce-logo-logo-google-a.png",
