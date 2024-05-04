@@ -26,10 +26,6 @@ function AdminDashboard() {
 
   const adminControls = [
     {
-        name: "Analytics",
-        link: "/admin/dashboard/analytics",
-      },
-    {
       name: "Products",
       link: "/admin/dashboard/products",
     },

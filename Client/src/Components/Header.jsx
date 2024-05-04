@@ -3,6 +3,8 @@ import { NavLink, useNavigate, Link ,useLocation} from "react-router-dom";
 import { motion } from "framer-motion";
 import { useAuth } from "../authContext/AuthContext.jsx";
 import { useCart } from "../cartContext/CartContext.jsx";
+import KeyboardOn from "./KeyboardOn.jsx";
+import { createPortal } from 'react-dom';
 
 function Header() {
   const { isAuthenticated, user, dispatch } = useAuth();
@@ -14,13 +16,20 @@ function Header() {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [search, setSearch] = useState('');
+  const [searchBarActive, setSearchBarActive] = useState(false);
 
   const handleSearchSubmit = (e) => {
-    e.preventDefault();
+  
     if (search.trim() !== '') {
       navigate(`/products/search/${search}`);
       setSearch('');
     }
+  };
+  const handleSearchFocus = () => {
+    setSearchBarActive(true);
+  };
+  const handleSearchBlur = () => {
+    setSearchBarActive(false);
   };
 
   useEffect(() => {
@@ -79,7 +88,7 @@ function Header() {
         </div>
         <div className="useractions">
           <form className="searchbarPC" onSubmit={handleSearchSubmit} action="">
-            <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search a product!" type="text" />
+            <input value={search} onChange={(e) => setSearch(e.target.value)} onFocus={handleSearchFocus}  placeholder="Search a product!" type="text" />
             <button type="submit"><i className="ri-search-line"></i></button>
           </form>
           {!menuOpen ? (
@@ -93,7 +102,8 @@ function Header() {
       {menuOpen && (
         <div className="hamberger-menu">
           <form onSubmit={handleSearchSubmit} action="">
-            <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search a product!" type="text" />
+          <input value={search} onChange={(e) => setSearch(e.target.value)} onFocus={handleSearchFocus}  placeholder="Search a product!" type="text" />
+
             <button type="submit"><i className="ri-search-line"></i></button>
           </form>
           <ul>
@@ -144,6 +154,14 @@ function Header() {
         <i onClick={() => user ? navigate('/profile') : navigate('/login')} className="ri-user-fill"></i>
         <i className="ri-store-3-line"></i>
       </div>
+      
+      {searchBarActive && (
+        // Render your component here when search bar is active
+        createPortal(
+          <KeyboardOn   enterButton="search" setSearch={setSearch} handleClose={handleSearchBlur} />,
+          document.body
+        )
+      )}
     </>
   );
 }

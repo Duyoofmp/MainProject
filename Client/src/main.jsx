@@ -18,6 +18,7 @@ import OrdersPage from './Components/OrdersPage.jsx'
 import PageNotFound from './Components/PageNotFound.jsx'
 import AdminDashboard from './Components/AdminDashboard.jsx'
 import AuthProtector from './Components/routeProtection/AuthProtector.jsx'
+import KeyboardOn from './Components/KeyboardOn.jsx'
 
 const router = createBrowserRouter([
   {
@@ -74,6 +75,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router}/>
     </AuthContextProvider>
     </CartContextProvider>
-
   </React.StrictMode>,
 )
