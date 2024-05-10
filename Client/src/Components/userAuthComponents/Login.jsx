@@ -88,10 +88,7 @@ function Login() {
     
         <button disabled={loader} type="submit">{loader ? 'loggingIn...' : 'Login'}</button>
         <p>Don't have an account? <Link to={'/signup'}>Sign Up</Link> </p>
-       // <div className="testelementslogin">
-       // <p onClick={() => setemail('duy@gmail.com') & setpassword('123456!')}>Test As Admin</p>
-        //<p  onClick={() => setemail('testuser@gmail.com') & setpassword('testuserA1!')}>Test As User</p>
-        //</div>
+       
 
 
 
